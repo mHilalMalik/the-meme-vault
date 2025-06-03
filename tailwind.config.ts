@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -84,11 +85,25 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'spin-slow': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
+				},
+				'glow': {
+					'0%, 100%': { 
+						boxShadow: '0 0 20px rgb(147 51 234 / 0.5)' 
+					},
+					'50%': { 
+						boxShadow: '0 0 40px rgb(147 51 234 / 0.8)' 
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'spin-slow': 'spin-slow 10s linear infinite',
+				'glow': 'glow 2s ease-in-out infinite alternate'
 			}
 		}
 	},
